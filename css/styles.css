@@ -18,7 +18,7 @@ ul {
 }
 
 .header .logo,
-footer .logo {
+.footer .logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -27,7 +27,7 @@ footer .logo {
   color: #2196f3;
 }
 
-.logo-studio {
+.header .logo-studio {
   color: #000000;
 }
 .header .link {
@@ -148,15 +148,7 @@ footer,
   text-decoration: none;
 }
 
-.footer .logo {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  color: #2196f3;
-}
-.footer span {
+.footer .logo-studio {
   color: #ffffff;
 }
 
@@ -174,6 +166,7 @@ footer,
 .footer ul a:focus {
   color: #ffffff;
 }
+
 .portfolio-list {
   column-count: 3;
 }
