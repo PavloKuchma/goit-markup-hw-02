@@ -9,21 +9,30 @@ body {
   font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
   color: #212121;
+  font-weight: 400;
 }
 
 ul {
   list-style: none;
 }
 
-.header .logo,
+.logo,
 .link,
 .mail,
-.phone {
+.phone,
+.map,
+.footer a /*специфічний клас logo чомусь не працює на вимикання підкреслення посилання*/ {
   text-decoration: none;
 }
+
 .header .link {
   color: var(--prime-linktxt-color);
 }
+
+.header .link.current {
+  color: var(--prime-link-color);
+}
+
 .header .logo,
 .footer .logo {
   font-family: "Raleway";
@@ -83,7 +92,7 @@ ul {
 }
 
 .advantages ul li {
-  display: inline; /*zagotovka*/
+  display: inline; /*заготовка + кращий вигляд*/
 }
 .advantages h3 {
   font-weight: 700;
@@ -109,7 +118,7 @@ ul {
 }
 
 .wwd ul li {
-  display: inline;
+  display: inline; /*заготовка + кращий вигляд*/
 }
 
 .team h3 {
@@ -130,31 +139,34 @@ ul {
 .footer,
 .hero {
   background-color: #2f303a;
-}
-.footer .logo a {
-  text-decoration: none;
+  /* background-color: tomato; */
 }
 
 .footer .logo-studio {
   color: var(--link-hover-color);
 }
 
-.footer ul a {
+.footer a.link,
+.footer a.map {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
 }
-
-.footer ul a:hover,
-.footer ul a:focus {
+.footer a.map {
+  color: var(--link-hover-color);
+}
+.address .link:hover,
+.address .link:focus,
+.address .map:hover,
+.address .map:focus {
   color: var(--link-hover-color);
 }
 
 /*PORTFOLIO*/
 .filters li {
-  display: inline;
+  display: inline; /*заготовка + кращий вигляд*/
 }
 .filters .button {
   font-weight: 500;
@@ -178,7 +190,6 @@ ul {
   padding-left: 0;
 }
 .portfolio-list li {
-  list-style: none;
   display: inline-block;
   width: calc(100% / 3);
   text-align: center;
