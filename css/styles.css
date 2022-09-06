@@ -6,9 +6,8 @@
 }
 /*MAINPAIGE*/
 body {
-  font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
-  color: #212121;
+  color: var(--prime-linktxt-color);
   font-weight: 400;
 }
 
@@ -33,8 +32,8 @@ ul {
   color: var(--prime-link-color);
 }
 
-.header .logo,
-.footer .logo {
+.logo,
+.logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -65,7 +64,7 @@ ul {
   color: var(--prime-link-color);
 }
 
-.main h1 {
+.hero .title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
@@ -75,6 +74,7 @@ ul {
   color: var(--link-hover-color);
 }
 .hero .button {
+  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
@@ -82,19 +82,34 @@ ul {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-
+  color: var(--link-hover-color);
+  background-color: transparent; /*на макеті власне не знайшов який все таки має бути колір без ховер/фокус, тому поки транспарент*/
   cursor: pointer;
 }
 
 .hero .button:hover,
 .hero .button:focus {
-  color: var(--link-hover-color);
+  background-color: var(--prime-link-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .advantages ul li {
   display: inline; /*заготовка + кращий вигляд*/
 }
-.advantages h3 {
+
+.advantages .title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.1;
@@ -102,14 +117,14 @@ ul {
   text-transform: uppercase;
 }
 
-.advantages p {
+.advantages .text {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--prime-text-color);
 }
-.wwd h2,
-.team h2 {
+.wwd .title,
+.team .title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.2;
@@ -121,14 +136,14 @@ ul {
   display: inline; /*заготовка + кращий вигляд*/
 }
 
-.team h3 {
+.team .name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.03em;
 }
-.team p {
+.team .text {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
@@ -146,15 +161,15 @@ ul {
   color: var(--link-hover-color);
 }
 
-.footer a.link,
-.footer a.map {
+.footer .link,
+.footer .map {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
 }
-.footer a.map {
+.footer .map {
   color: var(--link-hover-color);
 }
 .address .link:hover,
@@ -169,6 +184,7 @@ ul {
   display: inline; /*заготовка + кращий вигляд*/
 }
 .filters .button {
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -180,6 +196,7 @@ ul {
 .filters .button:hover,
 .filters .button:focus {
   color: var(--link-hover-color);
+  background-color: var(--prime-link-color);
 }
 
 .portfolio-list {
@@ -189,21 +206,22 @@ ul {
   width: 100%;
   padding-left: 0;
 }
-.portfolio-list li {
+.portfolio-list .list {
   display: inline-block;
   width: calc(100% / 3);
-  text-align: center;
 }
 
-.portfolio-list h2 {
+.portfolio-list .title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  text-align: left;
 }
-.portfolio-list p {
+.portfolio-list .text {
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.03em;
   color: var(--prime-text-color);
+  text-align: left;
 }
