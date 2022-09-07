@@ -1,5 +1,6 @@
 :root {
   --prime-link-color: #2196f3;
+  --herobtn-link-color: #188ce8;
   --prime-linktxt-color: #212121;
   --prime-text-color: #757575;
   --link-hover-color: #ffffff;
@@ -34,7 +35,7 @@ ul {
 
 .logo,
 .logo {
-  font-family: "Raleway";
+  font-family: "Raleway, sans-serif";
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
@@ -62,6 +63,7 @@ ul {
 .header .link:hover,
 .header .link:focus {
   color: var(--prime-link-color);
+  color: #188ce8;
 }
 
 .hero .title {
@@ -73,6 +75,7 @@ ul {
   text-transform: uppercase;
   color: var(--link-hover-color);
 }
+
 .hero .button {
   font-family: inherit;
   font-weight: 700;
@@ -83,13 +86,13 @@ ul {
   text-align: center;
   letter-spacing: 0.06em;
   color: var(--link-hover-color);
-  background-color: transparent; /*на макеті власне не знайшов який все таки має бути колір без ховер/фокус, тому поки транспарент*/
+  background-color: var(--prime-link-color);
   cursor: pointer;
 }
 
 .hero .button:hover,
 .hero .button:focus {
-  background-color: var(--prime-link-color);
+  background-color: var(--herobtn-link-color);
 }
 
 .visually-hidden {
